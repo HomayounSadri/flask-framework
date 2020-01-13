@@ -3,6 +3,9 @@
   <head>
     <!-- Bootstrap core CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdn.pydata.org/bokeh/release/bokeh-0.12.16.min.css">
+    <script src="https://cdn.pydata.org/bokeh/release/bokeh-1.4.0.min.js"></script>
+
   </head>
   <body>
     <!-- Fixed navbar -->
@@ -26,22 +29,14 @@
         </div><!--/.nav-collapse -->
       </div>
     </nav>
-
+    <br><br><br>
+    <br><br><br>
     <div class="container theme-showcase" role="main">
-        <!-- <div class="jumbotron"> -->
-        <!-- </div> -->
-        <br><br><br>
-        <br><br><br>
         <div class="row">
-            <div class="col-sm-3"></div>
-            <div class="col-sm-3 well">
-                <form id='inputForm' method='post' action='graph' >
-                    <div class="form-group">
-                        <label for="stockName">Enter Stock Ticker Below</label>
-                        <input type='text' id="stockName" class="form-control" name='ticker' value="AAPL"/>
-                    </div>
-                    <p><input class="btn btn-primary" type='submit' value='Submit'/></p>
-                </form>
+            <div class="col-sm-12">
+                {{ div | safe }}
+              <br><br>
+                {{ script | safe }}
             </div>
         </div>
     </div> <!-- /container -->
@@ -49,7 +44,6 @@
     <!-- Bootstrap core JavaScript
     ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->
-    <script src="https://cdn.pydata.org/bokeh/release/bokeh-0.12.16.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
   </body>
